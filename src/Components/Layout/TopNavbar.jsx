@@ -40,7 +40,7 @@ export default function TopNavbar({ isToggleOpen, setIsToggleOpen }) {
       }}
     >
       <Flex align="center" justify="space-between" h="100%">
-        <Flex align="center" gap="sm">
+        <Flex align="center" gap="sm" ml={6}>
           <ActionIcon
             variant="subtle"
             color= {isDark ? "#FFFFFF" :"black"}
