@@ -199,12 +199,12 @@ export default function ToggleSidebar({ open }) {
   const location = useLocation();
  
   const [hoveredLabel, setHoveredLabel] = useState(null);
-  const [defaultNavigation, setDefaultNavigation] = useState(true);
-    const handleMenuClick = (label) => {
-    setDefaultNavigation(false);
-    setActiveSubMenu(label);  
-    navigate(`/${label.toLowerCase().replace(/\s+/g, '')}`);
-  };
+  // const [defaultNavigation, setDefaultNavigation] = useState(true);
+  //   const handleMenuClick = (label) => {
+  //   setDefaultNavigation(false);
+  //   setActiveSubMenu(label);  
+  //   navigate(`/${label.toLowerCase().replace(/\s+/g, '')}`);
+  // };
  
   useEffect( ()=>{
    navigate('/analytics');
@@ -228,10 +228,10 @@ export default function ToggleSidebar({ open }) {
     }
   }, [location.pathname]);
  
-  // const handleMenuClick = (label) => {
-  //   setActiveSubMenu(label);
-  //   navigate(`/${label.toLowerCase().replace(/\s+/g, '')}`);
-  // };
+  const handleMenuClick = (label) => {
+    setActiveSubMenu(label);
+    navigate(`/${label.toLowerCase().replace(/\s+/g, '')}`);
+  };
  
   const getHoverBg = isDark ? "#E9ECEF" : theme.colors.gray[3];
   const getActiveBg = isDark ? theme.colors.gray[2] : theme.colors.gray[3];
