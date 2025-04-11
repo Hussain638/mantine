@@ -207,7 +207,7 @@ export default function ToggleSidebar({ open }) {
   // };
  
   useEffect( ()=>{
-   navigate('/analytics');
+   navigate('/');
    setActiveSubMenu('Analytics')
   },[]);
  
