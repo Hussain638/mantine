@@ -40,13 +40,13 @@ export default function LayoutWrapper() {
       </Box>
 
       {/* Main Content */}
-      <Box left={70}
+      <Box width = {isToggleOpen ? "100%" : "95vw"}
         style={{
           gridColumn: '2 / 3',
           gridRow: '2 / 3',
           padding: theme.spacing.md,
           overflowY: 'auto',
-          marginLeft:"6px"
+          marginLeft:"20px"
         }}
       >
         <Outlet />
