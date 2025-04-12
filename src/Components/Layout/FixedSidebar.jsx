@@ -52,7 +52,7 @@ export default function FixedSidebar() {
 
   const backgroundColor = isDark ? "rgb(40, 40, 44)" :"#FFFFFF";
   const borderColor = isDark ? theme.colors.dark[3] : theme.colors.gray[6];
-  const iconColor = "black"; // On hover
+  const iconColor = "black"; 
   const inactiveColor = isDark ? '#d9e3f0' : '#495057';
 
   const { activeMenu, setActiveMenu, setActiveSubMenu } = useMenuStore();

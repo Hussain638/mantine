@@ -3,6 +3,7 @@ import LayoutWrapper from './Components/Layout/LayoutWrapper';
 import Dashboard from './pages/Dashboard';
 import Ecommerce from './pages/Ecommerce';
 import NotFoundPage from './Components/NotFoundPage';
+import Products from "./pages/Products"
 
 export default function App() {
   return (
@@ -13,6 +14,9 @@ export default function App() {
           <Route path="ecommerce" element={<Ecommerce />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
+        
+        <Route path="products" element={<LayoutWrapper><Products /></LayoutWrapper>} />
+
 
       </Routes>
     </BrowserRouter>

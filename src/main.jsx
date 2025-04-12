@@ -7,18 +7,15 @@ import dayjs from 'dayjs';
 import '@mantine/core/styles.css';
 import '@mantine/charts/styles.css';
  
- 
-// ✅ Color scheme manager setup
 const colorSchemeManager = localStorageColorSchemeManager({
-  key: 'mantine-color-scheme',           // localStorage key
-  defaultValue: 'light',                 // fallback if none set
-  getInitialValueInEffect: true,         // allow reading from system preference on first load
+  key: 'mantine-color-scheme',        
+  defaultValue: 'light',             
+  getInitialValueInEffect: true,         
 });
  
 const theme = createTheme({
   fontFamily: 'Inter, sans-serif',
   primaryColor: 'blue',
-  // No need to hardcode colorScheme, Mantine handles it now
 });
  
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -27,7 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       theme={theme}
       withGlobalStyles
       withNormalizeCSS
-      colorSchemeManager={colorSchemeManager} // ✅ use correct manager
+      colorSchemeManager={colorSchemeManager} 
     >
       <DatesProvider settings={{ locale: 'en', firstDayOfWeek: 0 }}>
       <App />
